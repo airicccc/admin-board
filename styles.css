@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,400&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary: rgb(26, 117, 255);
+	--secondary: rgb(255, 204, 0);
+	--bg: rgb(235, 235, 255);
+	--whitespace: rgb(255, 255, 245);
+    font-family: "Rubik";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+	display: grid;
+	grid-template: 150px 1fr/1fr 4fr;
+	grid-template-areas: "side nav" "side main";
+}
+
+.sidebar {
+	color: white;
+	grid-area: side;
+	background-color: var(--primary);
+    text-align: center;
+}
+
+.dash-header {
+    font-size: 18px;
+    padding: 0.75rem 0;
+}
+
+li {
+    font-size: 20px;
+}
+
+.navbar {
+	grid-area: nav;
+	background-color: var(--whitespace);
+}
+
+.top {
+    display: flex;
+}
+
+.search {
+    flex: 1;
+}
+
+.user {
+    margin-right: 15px; 
+}
+
+.welcome {
+    margin-left: 15px;
+}
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buttons {
+    justify-self: end;
+    align-self: center;
+}
+
+button {
+    border-radius: 30px;
+    width: 80px;
+    height: 30px;
+    margin: 0 0.5rem;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
+.left-box,
+.right-upper,
+.right-lower {
+	padding: 0.75rem;
+}
+
+.header {
+    margin: 0.5rem 0;
+}
+
+.content {
+	grid-area: main;
+	background-color: var(--bg);
+	display: grid;
+	grid-template: 1fr 1fr/2fr 1fr;
+	grid-template-areas: "left r1" "left r2";
+}
+
+.left-box {
+	grid-area: left;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-rows: 1fr;
+	gap: 15px;
+}
+
+.card {
+	background-color: var(--whitespace);
+    border-radius: 15px;
+    border-left: 10px outset var(--secondary);
+    padding: 2rem;
+}
+
+.name {
+    padding-bottom: 0.75rem;
+}
+
+p {
+    font-size: 14px;
+}
+
+.right-upper {
+	grid-area: r1;
+}
+
+.right-lower {
+	grid-area: r2;
+}
