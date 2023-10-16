@@ -230,9 +230,14 @@ button {
     box-shadow: 1px 3px 3px black;
 }
 
-.name {
+.title {
 	padding-bottom: 0.75rem;
 }
+
+.name {
+	padding-bottom: 0.25rem;
+}
+
 
 p {
 	font-size: 13px;
@@ -246,11 +251,20 @@ p {
 .announcements {
 	background-color: var(--whitespace);
 	border-radius: 15px;
-	padding: 2rem;
+	padding: 1rem 2rem;
 	display: grid;
-	gap: 1.5rem;
+	gap: 1rem;
 }
 
+.bar {
+    height: 1px;
+    background-color: black;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+}
 .right-lower {
 	grid-area: r2;
 }
