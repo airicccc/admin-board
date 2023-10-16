@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,400&display=swap");
 
 * {
 	margin: 0;
@@ -10,34 +10,115 @@
 	--secondary: rgb(255, 204, 0);
 	--bg: rgb(235, 235, 255);
 	--whitespace: rgb(255, 255, 245);
-    font-family: "Rubik";
+	font-family: "Rubik";
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 .container {
 	display: grid;
-	grid-template: 150px 1fr/1fr 4fr;
+	grid-template: 160px 1fr/275px 1fr;
 	grid-template-areas: "side nav" "side main";
 }
 
 .sidebar {
-	color: white;
+	color: var(--whitespace);
 	grid-area: side;
 	background-color: var(--primary);
-    text-align: center;
 }
 
 .dash-header {
-    font-size: 18px;
-    padding: 0.75rem 0;
+	font-size: 18px;
+	padding: 0.75rem 0;
+	margin-left: 2rem;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
 }
 
 li {
-    font-size: 20px;
+	font-size: 20px;
+	margin-left: 2rem;
+    margin-bottom: 0.25rem;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+}
+
+.dash-header::before {
+	content: url(./assets/view-dashboard.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+.home::before {
+	content: url(./assets/home.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.profile::before {
+	content: url(./assets/card-account-details-outline.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.messages::before {
+	content: url(./assets/message.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.history::before {
+	content: url(./assets/history.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.tasks::before {
+	content: url(./assets/note-multiple.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.community::before {
+	content: url(./assets/account-multiple.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.settings::before {
+	content: url(./assets/cog.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.support::before {
+	content: url(./assets/comment-question.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.privacy:before {
+	content: url(./assets/shield-account-outline.svg);
+	position: relative;
+	left: -10px;
+	bottom: -2px;
+}
+
+.links {
+	margin-bottom: 1rem;
 }
 
 .navbar {
@@ -46,38 +127,69 @@ li {
 }
 
 .top {
-    display: flex;
+	display: flex;
+    padding: 10px 0; 
 }
 
-.search {
-    flex: 1;
+.search-icon {
+	content: url(./assets/magnify.svg);
+    padding: 0 2rem;
+}
+
+.search-bar {
+	background-color: var(--bg);
+	border-radius: 10px;
+    margin: 10px 0;
+	flex: 1;
+}
+
+.alert-icon {
+	content: url(./assets/bell-ring-outline.svg);
+	padding: 0 2rem;
 }
 
 .user {
-    margin-right: 15px; 
-}
-
-.welcome {
-    margin-left: 15px;
-}
-.bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.buttons {
-    justify-self: end;
+	margin-right: 5rem;
     align-self: center;
 }
 
-button {
-    border-radius: 30px;
+.user-icon {
+    content: url(./assets/user.png);
+    height: 50px;
+    width: 50px;
+    margin-right: 2rem;    
+}
+
+.user-icon-2 {
+    content: url(./assets/user.png);
+    height: 80px;
     width: 80px;
-    height: 30px;
-    margin: 0 0.5rem;
-    background-color: var(--primary);
-    color: white;
-    font-weight: 700;
+    margin-left: 2rem;    
+}
+
+.welcome {
+	margin-left: 1rem;
+    flex: 1;
+}
+.bottom {
+	display: flex;
+    align-items: center;
+}
+
+.buttons {
+	justify-self: end;
+	align-self: center;
+    margin-right: 4rem;
+}
+
+button {
+	border-radius: 30px;
+	width: 80px;
+	height: 30px;
+	margin: 0 0.5rem;
+	background-color: var(--primary);
+	color: var(--whitespace);
+	font-weight: 700;
 }
 
 .left-box,
@@ -87,7 +199,7 @@ button {
 }
 
 .header {
-    margin: 0.5rem 0;
+	margin: 0.5rem 0;
 }
 
 .content {
@@ -111,21 +223,32 @@ button {
 
 .card {
 	background-color: var(--whitespace);
-    border-radius: 15px;
-    border-left: 10px outset var(--secondary);
-    padding: 2rem;
+	border-radius: 15px;
+	height: 150px;
+	border-left: 10px outset var(--secondary);
+	padding: 2rem;
+    box-shadow: 1px 3px 3px black;
 }
 
 .name {
-    padding-bottom: 0.75rem;
+	padding-bottom: 0.75rem;
 }
 
 p {
-    font-size: 14px;
+	font-size: 13px;
 }
 
 .right-upper {
 	grid-area: r1;
+}
+
+.trending,
+.announcements {
+	background-color: var(--whitespace);
+	border-radius: 15px;
+	padding: 2rem;
+	display: grid;
+	gap: 1.5rem;
 }
 
 .right-lower {
